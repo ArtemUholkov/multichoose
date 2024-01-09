@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>multi</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <section class="multi">
+      <div class="multi_wrapper">
+        <div class="multi_titles_wrapper">
+          <div class="multi_title firts_title multi_active_title">
+            <span class="multi_slash"></span>
+            <p class="multi_title_text first_text">
+              GLP-1 Therapy and<br />
+              Cardiovascular Health
+            </p>
+          </div>
+          <span class="multi_deco_line"></span>
+          <div class="multi_title second_title">
+            <span class="multi_slash"></span>
+            <p class="multi_title_text second_text">Patient Adherence and GLP-1 Therapy</p>
+          </div>
+          <span class="multi_deco_line"></span>
+          <div class="multi_title third_title">
+            <span class="multi_slash"></span>
+            <p class="multi_title_text third_text">
+              The Growing Influence of GLP-1 Therapy in Diabetes Care
+            </p>
+          </div>
+          <span class="multi_deco_line"></span>
+          <div class="multi_title fourth_title">
+            <span class="multi_slash"></span>
+            <p class="multi_title_text fourth_text">Patient Adherence and GLP-1 Therapy</p>
+          </div>
+          <span class="multi_deco_line"></span>
+          <div class="multi_title fifth_title">
+            <span class="multi_slash"></span>
+            <p class="multi_title_text fifth_text">Patient Adherence and GLP-1 Therapy</p>
+          </div>
+          <span class="multi_deco_line"></span>
+        </div>
+        <div class="multi_content">
+          <div class="multi_content_wrapper content_wrapper_first">
+            <img src="shoes.png" alt="shoes" class="multi_content_image" />
+            <p class="multi_content_text">
+              Beyond glycemic control, GLP-1 therapy has displayed promising cardiovascular
+              benefits.
+            </p>
+            <p class="multi_content_text">
+              Several studies suggest that certain GLP-1 agonists are associated with a reduction in
+              major adverse cardiovascular events such as heart attacks and strokes.
+            </p>
+            <p class="multi_content_text">
+              These findings signify a potential dual advantage for patients with type 2 diabetes –
+              not only managing blood sugar levels but also mitigating cardiovascular risks.
+            </p>
+          </div>
+
+          <div class="multi_content_wrapper content_wrapper_second hide_element">
+            <img src="sky.jpg" alt="shoes" class="multi_content_image" />
+            <p class="multi_content_text">
+              Beyond glycemic control, GLP-1 therapy has displayed promising cardiovascular
+              benefits.
+            </p>
+            <p class="multi_content_text">
+              Several studies suggest that certain GLP-1 agonists are associated with a reduction in
+              major adverse cardiovascular events such as heart attacks and strokes.
+            </p>
+            <p class="multi_content_text">
+              These findings signify a potential dual advantage for patients with type 2 diabetes –
+              not only managing blood sugar levels but also mitigating cardiovascular risks.
+            </p>
+          </div>
+          <div class="multi_content_wrapper content_wrapper_third hide_element">
+            <img src="water.jpg" alt="shoes" class="multi_content_image" />
+            <p class="multi_content_text">
+              Beyond glycemic control, GLP-1 therapy has displayed promising cardiovascular
+              benefits.
+            </p>
+            <p class="multi_content_text">
+              Several studies suggest that certain GLP-1 agonists are associated with a reduction in
+              major adverse cardiovascular events such as heart attacks and strokes.
+            </p>
+            <p class="multi_content_text">
+              These findings signify a potential dual advantage for patients with type 2 diabetes –
+              not only managing blood sugar levels but also mitigating cardiovascular risks.
+            </p>
+          </div>
+          <div class="multi_content_wrapper content_wrapper_fourth hide_element">
+            <img src="tree.jpg" alt="shoes" class="multi_content_image" />
+            <p class="multi_content_text">
+              Beyond glycemic control, GLP-1 therapy has displayed promising cardiovascular
+              benefits.
+            </p>
+            <p class="multi_content_text">
+              Several studies suggest that certain GLP-1 agonists are associated with a reduction in
+              major adverse cardiovascular events such as heart attacks and strokes.
+            </p>
+            <p class="multi_content_text">
+              These findings signify a potential dual advantage for patients with type 2 diabetes –
+              not only managing blood sugar levels but also mitigating cardiovascular risks.
+            </p>
+          </div>
+          <div class="multi_content_wrapper content_wrapper_fifth hide_element">
+            <img src="trees.jpg" alt="shoes" class="multi_content_image" />
+            <p class="multi_content_text">
+              Beyond glycemic control, GLP-1 therapy has displayed promising cardiovascular
+              benefits.
+            </p>
+            <p class="multi_content_text">
+              Several studies suggest that certain GLP-1 agonists are associated with a reduction in
+              major adverse cardiovascular events such as heart attacks and strokes.
+            </p>
+            <p class="multi_content_text">
+              These findings signify a potential dual advantage for patients with type 2 diabetes –
+              not only managing blood sugar levels but also mitigating cardiovascular risks.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <style></style>
+    <script>
+      let multiTitles = document.querySelectorAll('.multi_title');
+      let titlesWrapper = document.querySelector('.multi_titles_wrapper');
+      let allContents = document.querySelectorAll('.multi_content_wrapper');
+
+      let firstContent = document.querySelector('.content_wrapper_first');
+      let secondContent = document.querySelector('.content_wrapper_second');
+      let thirdContent = document.querySelector('.content_wrapper_third');
+      let fourthContent = document.querySelector('.content_wrapper_fourth');
+      let fifthContent = document.querySelector('.content_wrapper_fifth');
+
+      titlesWrapper.addEventListener('click', (e) => {
+        console.log(e.target);
+        if (
+          e.target.classList.contains('first_text') ||
+          e.target.classList.contains('firts_title')
+        ) {
+          allContents.forEach((item) => {
+            if (item.classList.contains('hide_element') == false) {
+              item.classList.add('hide_element');
+            }
+          });
+          firstContent.classList.remove('hide_element');
+        } else if (
+          e.target.classList.contains('second_text') ||
+          e.target.classList.contains('second_title')
+        ) {
+          allContents.forEach((item) => {
+            if (item.classList.contains('hide_element') == false) {
+              item.classList.add('hide_element');
+            }
+          });
+          secondContent.classList.remove('hide_element');
+        } else if (
+          e.target.classList.contains('third_text') ||
+          e.target.classList.contains('third_title')
+        ) {
+          allContents.forEach((item) => {
+            if (item.classList.contains('hide_element') == false) {
+              item.classList.add('hide_element');
+            }
+          });
+          thirdContent.classList.remove('hide_element');
+        } else if (
+          e.target.classList.contains('fourth_text') ||
+          e.target.classList.contains('fourth_title')
+        ) {
+          allContents.forEach((item) => {
+            if (item.classList.contains('hide_element') == false) {
+              item.classList.add('hide_element');
+            }
+          });
+          fourthContent.classList.remove('hide_element');
+        } else if (
+          e.target.classList.contains('fifth_text') ||
+          e.target.classList.contains('fifth_title')
+        ) {
+          allContents.forEach((item) => {
+            if (item.classList.contains('hide_element') == false) {
+              item.classList.add('hide_element');
+            }
+          });
+          fifthContent.classList.remove('hide_element');
+        }
+      });
+
+      multiTitles.forEach((item) => {
+        item.addEventListener('click', () => {
+          multiTitles.forEach((item) => {
+            item.classList.remove('multi_active_title');
+          });
+          item.classList.add('multi_active_title');
+        });
+      });
+    </script>
+  </body>
+</html>
